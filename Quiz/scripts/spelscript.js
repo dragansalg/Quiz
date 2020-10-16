@@ -81,7 +81,7 @@ getNewQuestion = () => {
             console.log(ans + " -> " + currentQuestion.answers[ans]);
             if(currentQuestion.answers[ans]){
                 var x = answerNames[index];
-                answersList.innerHTML += '<input type="checkbox" value='+x+'>'+currentQuestion.answers[ans]+'<br>';
+                answersList.innerHTML += '<input type="checkbox" value='+x+'>'+currentQuestion.answers[ans].replace(/</g, "&lt;").replace(/>/g, "&gt;")+'<br>';
                 index ++;
             }
         }
